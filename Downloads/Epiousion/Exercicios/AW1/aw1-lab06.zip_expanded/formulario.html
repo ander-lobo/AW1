@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Criação Dinâmica de Elementos HTML</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/tabelas.css">
+
+        <script>
+            var contador = 1;            
+            function adicionarLinha() {
+            	for (var i = 0; i < 1; i++) {
+                    add = {
+                        nome: "nome" + i,
+                        telefone: "telefone" + i,
+                    };
+            	var table = document.getElementById("tabelaContatos");
+                var row = table.insertRow(i);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+                
+                cell1.innerHTML = "Nome: ";
+                cell2.innerHTML = '<input name="nome'+ contador +'" type="text" size="20">';
+                cell3.innerHTML = "Telefone: ";
+                cell4.innerHTML = '<input name="telefone'+ contador++ +'" type="text" size="10">';
+                cell5.innerHTML = '<input type="button" onclick="removerLinha(this)" value="Remover">';
+                console.log(contador);
+            	}
+            }
+            function removerLinha(linhaId) {
+            	var i = linhaId.parentNode.parentNode.rowIndex;
+            	document.getElementById('tabelaContatos').deleteRow(i);
+            	
+            }
+        </script>
+
+    </head>
+    <body>
+        <div class="tabelaGC">
+
+            <table>
+                <tr>
+                    <td class="coluna1"></td>
+                    <td class="coluna2">Criação Dinâmica de Elementos HTML</td>
+                    <td class="coluna3"></td>
+                </tr>
+            </table>
+
+            <form name="formulario" action="http://www.globalcode.com.br" method="post">
+                <fieldset>
+                    <legend>Cadastro de Contatos</legend>
+                    <input type="button" onclick="adicionarLinha()" value="Adicionar">
+                    <table id="tabelaContatos">
+                        <tr>
+                            <td>
+                                Nome:
+                            </td>
+                            <td>
+                                <input name="nome1" type="text" size="20">
+                            </td>
+                            <td>
+                                Telefone:
+                            </td>
+                            <td>
+                                <input name="telefone1" type="text" size="10">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+            </form>
+        </div>
+    </body>
+</html>

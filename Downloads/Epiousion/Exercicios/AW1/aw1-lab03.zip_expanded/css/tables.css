@@ -1,0 +1,38 @@
+
+p {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-weight: bold
+}
+ .produto1 {
+    color:#FF3300
+}
+
+ .produto2 {
+    color:#000099
+}
+
+ .produto3 {
+    color:#009900
+}
+table{
+	border-spacing: 5px;
+}
+.he1 {
+	font-family: Arial;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+.he2 {
+	font-family: Arial;
+	font-weight: 13px;
+	color: #FFFFFF;
+	background-color: #858495;
+	
+}
+.he3 {
+	font-family: Verdana;
+	font-weight: 13px;
+	color: #858495;
+	background-color: #EEEEEE;	
+}
+

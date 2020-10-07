@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro de Clientes</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<table>
+    	<tr>
+    	<td><h2> Cadastro de Clientes </h2></td>
+    	</tr>
+    	<tr>
+    	<td>
+	    	<fieldset>
+			<legend>Dados do cliente</legend>
+			<form method="post" name="formCadastroCliente" action="/processaForm">
+			<label for="nome"> Nome </label><input type="text" name="nome" id="nome" /><br><br>
+			<label for="email"> Email </label><input type="text" name="email" id="email" /><br><br>
+			<input type="checkbox" name="confirma" id="confirma"> <label for="confirma"> Confirmar envio do formulario </label><br><br>
+			<input type="submit" value="Salvar" />
+			</form>
+			</fieldset>
+		</td>
+		</tr>
+		</table>
+    </body>
+</html>

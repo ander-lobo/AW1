@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verifica se o ano é bissexto</title>
+    <meta charset="utf-8" />
+    <script>
+        
+    function teste (ano_atual){
+    	var d = new Date();
+    	ano_atual = d.getFullYear();
+    if(ano_atual % 400 == 0 || ano_atual % 4 == 0 && ano_atual % 100 != 0){
+       	window.alert("O ano " + ano_atual + " é bissexto!");
+       } else{
+       	window.alert("O ano " + ano_atual + " não é bissexto!");
+       }
+    }
+    
+    function verificaBissexto (ano_atual){
+    	if(ano_atual % 400 == 0 || ano_atual % 4 == 0 && ano_atual % 100 != 0){
+        	window.alert("O ano " + ano_atual + " é bissexto!");
+        } else{
+        	window.alert("O ano " + ano_atual + " não é bissexto!");
+        }
+    }
+        
+    </script>
+  </head>
+  <body>
+
+            
+      <p><button onclick="teste(('ano_atual').value);">Verificar se o ano atual é bissexto!</button></p>
+      
+      <form action="">
+          Digite um ano: <input onchange="verificaBissexto(this.value)" id="ano_atual" type="text" size="5" maxlength="4" />
+      </form>
+
+  </body>
+</html>
